@@ -123,8 +123,28 @@
     <div class="verse-card">
       <p><strong>Romans 10:9</strong><br>“If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.”</p>
     </div>
+
+    <!-- Next Steps Card -->
+    <div class="card" style="max-width:420px;">
+      <h1>Next Steps</h1>
+      <p>If you want to learn more, ask questions, or grow in your faith, we’d love to help you take your next step.</p>
+      <p style="margin-top:1.2rem;">
+        <a href="https://waypoint.info/home" target="_blank" style="display:inline-block;padding:0.75rem 1.5rem;background:#0a1a33;color:#ffffff;text-decoration:none;border-radius:999px;font-weight:600;">
+          Start Your Journey Here
+        </a>
+      </p>
+    </div>
   </div>
 <script>
+  // Reset dots on page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const dots = document.querySelectorAll('.progress span');
+    dots.forEach(dot => dot.textContent = '○');
+
+    const notes = document.querySelectorAll('.note');
+    notes.forEach(note => note.style.display = 'none');
+  });
+
   function toggleNote(id) {
     const note = document.getElementById(id);
     if (!note) return;
