@@ -73,6 +73,16 @@
       border-radius: 10px;
     }
     .verses p { cursor: pointer; }
+  .progress {
+      display: flex;
+      justify-content: center;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    .progress span {
+      color: #0a1a33;
+    }
   </style>
 </head>
 <body>
@@ -86,6 +96,7 @@
     <div class="card">
       <h1>The Gospel</h1>
       <div class="subtitle">GOSPEL – A Simple Outline</div>
+      <div class="progress"><span id="dot-g">○</span><span id="dot-o">○</span><span id="dot-s">○</span><span id="dot-p">○</span><span id="dot-e">○</span><span id="dot-l">○</span></div>
       <div class="verses">
         <p onclick="toggleNote('g')"><strong>G – God</strong><br>God loves you.</p>
         <div id="g" class="note">God’s love is personal and intentional. He knows you and cares deeply about your life.</div>
@@ -114,6 +125,14 @@
     </div>
   </div>
 <script>
+  function toggleNote(id) {
+    const note = document.getElementById(id);
+    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+
+    const dot = document.getElementById('dot-' + id);
+    if (dot) dot.textContent = '●';
+  }
+
   function toggleNote(id) {
     const note = document.getElementById(id);
     note.style.display = note.style.display === 'block' ? 'none' : 'block';
