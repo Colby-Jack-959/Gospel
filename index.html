@@ -25,6 +25,7 @@
       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
       text-align: center;
       animation: floatIn 0.8s ease-out;
+      position: relative;
     }
     h1 {
       font-size: 2.2rem;
@@ -60,6 +61,19 @@
       margin-bottom: 0.8rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
+    .side-verses {
+      position: absolute;
+      top: 2rem;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      color: #0a1a33;
+    }
+    .side-verses div {
+      max-width: 30%;
+      text-align: center;
+    }
     .footer {
       margin-top: 1.8rem;
       font-size: 0.9rem;
@@ -73,6 +87,13 @@
 </head>
 <body>
   <div class="card">
+    <!-- Side Bible Verses -->
+    <div class="side-verses">
+      <div>John 3:16<br>“For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.”</div>
+      <div>Romans 6:23<br>“For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.”</div>
+      <div>Romans 10:9<br>“If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.”</div>
+    </div>
+
     <!-- Navy Blue Crosses -->
     <div class="emoji">
       <span>✝️</span><span>✝️</span><span>✝️</span>
@@ -104,3 +125,4 @@
   </div>
 </body>
 </html>
+
