@@ -63,6 +63,16 @@
       from { transform: translateY(20px); opacity: 0; }
       to { transform: translateY(0); opacity: 1; }
     }
+  .note {
+      display: none;
+      font-size: 0.85rem;
+      margin: 0.3rem 0 0.8rem;
+      color: #0a1a33;
+      background: #f5f7fa;
+      padding: 0.6rem;
+      border-radius: 10px;
+    }
+    .verses p { cursor: pointer; }
   </style>
 </head>
 <body>
@@ -77,12 +87,23 @@
       <h1>The Gospel</h1>
       <div class="subtitle">GOSPEL – A Simple Outline</div>
       <div class="verses">
-        <p><strong>G – God</strong><br>God loves you.</p>
-        <p><strong>O – Our Sins</strong><br>Our sins separate us from God.</p>
-        <p><strong>S – Savior</strong><br>Jesus is the only way.</p>
-        <p><strong>P – Pay</strong><br>Jesus paid the penalty for sin.</p>
-        <p><strong>E – Eternal Life</strong><br>God offers it freely.</p>
-        <p><strong>L – Live</strong><br>Live for Him.</p>
+        <p onclick="toggleNote('g')"><strong>G – God</strong><br>God loves you.</p>
+        <div id="g" class="note">God’s love is personal and intentional. He knows you and cares deeply about your life.</div>
+
+        <p onclick="toggleNote('o')"><strong>O – Our Sins</strong><br>Our sins separate us from God.</p>
+        <div id="o" class="note">Sin breaks our relationship with God, but separation is not the end of the story.</div>
+
+        <p onclick="toggleNote('s')"><strong>S – Savior</strong><br>Jesus is the only way.</p>
+        <div id="s" class="note">Jesus bridges the gap between God and humanity through His life, death, and resurrection.</div>
+
+        <p onclick="toggleNote('p')"><strong>P – Pay</strong><br>Jesus paid the penalty for sin.</p>
+        <div id="p" class="note">His sacrifice means forgiveness is a gift, not something we earn.</div>
+
+        <p onclick="toggleNote('e')"><strong>E – Eternal Life</strong><br>God offers it freely.</p>
+        <div id="e" class="note">Eternal life begins now through a relationship with Jesus.</div>
+
+        <p onclick="toggleNote('l')"><strong>L – Live</strong><br>Live for Him.</p>
+        <div id="l" class="note">Following Jesus is a daily journey of trust, growth, and love.</div>
       </div>
       <div class="footer">Simple. Hopeful. Life-changing.</div>
     </div>
@@ -92,5 +113,11 @@
       <p><strong>Romans 10:9</strong><br>“If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.”</p>
     </div>
   </div>
+<script>
+  function toggleNote(id) {
+    const note = document.getElementById(id);
+    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
 </body>
 </html>
