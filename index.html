@@ -127,15 +127,16 @@
 <script>
   function toggleNote(id) {
     const note = document.getElementById(id);
+    if (!note) return;
+
+    // toggle note visibility
     note.style.display = note.style.display === 'block' ? 'none' : 'block';
 
+    // fill progress dot
     const dot = document.getElementById('dot-' + id);
-    if (dot) dot.textContent = '●';
-  }
-
-  function toggleNote(id) {
-    const note = document.getElementById(id);
-    note.style.display = note.style.display === 'block' ? 'none' : 'block';
+    if (dot) {
+      dot.textContent = '●';
+    }
   }
 </script>
 </body>
