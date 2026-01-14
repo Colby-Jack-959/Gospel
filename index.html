@@ -16,25 +16,31 @@
       justify-content: center;
       color: #1f2933;
     }
-    .card {
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .card, .verse-card {
       background: #FFC700; /* golden card */
       color: #0a1a33; /* navy text */
-      max-width: 420px;
-      padding: 2.5rem;
       border-radius: 24px;
       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      padding: 2rem;
+      max-width: 300px;
+      flex: 1 1 250px;
       text-align: center;
       animation: floatIn 0.8s ease-out;
-      position: relative;
     }
     h1 {
-      font-size: 2.2rem;
+      font-size: 2rem;
       margin-bottom: 0.5rem;
     }
     .subtitle {
-      font-size: 1.1rem;
-      color: #0a1a33;
-      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
     }
     .emoji {
       font-size: 2rem;
@@ -45,38 +51,20 @@
       margin: 0 0.3rem;
     }
     p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
-    .verses {
-      margin-top: 1.5rem;
-      text-align: left;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
     .verses p {
-      background: #FFC700; /* match card gold */
-      color: #0a1a33; /* navy text */
-      padding: 1rem;
+      background: #FFC700;
+      color: #0a1a33;
+      padding: 0.8rem;
       border-radius: 12px;
-      font-size: 0.95rem;
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
       box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     }
-    .side-verses {
-      position: absolute;
-      top: 2rem;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      color: #0a1a33;
-    }
-    .side-verses div {
-      max-width: 30%;
-      text-align: center;
-    }
     .footer {
-      margin-top: 1.8rem;
-      font-size: 0.9rem;
+      margin-top: 1rem;
+      font-size: 0.85rem;
       color: #0a1a33;
     }
     @keyframes floatIn {
@@ -86,43 +74,34 @@
   </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Side Bible Verses -->
-    <div class="side-verses">
-      <div>John 3:16<br>“For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.”</div>
-      <div>Romans 6:23<br>“For the wages of sin is death, but the gift of God is eternal life in Christ Jesus our Lord.”</div>
-      <div>Romans 10:9<br>“If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.”</div>
+  <div class="container">
+    <!-- Left Verse Card -->
+    <div class="verse-card">
+      <p><strong>John 3:16</strong><br>“For God so loved the world that He gave His one and only Son, that whoever believes in Him shall not perish but have eternal life.”</p>
     </div>
 
-    <!-- Navy Blue Crosses -->
-    <div class="emoji">
-      <span>✝️</span><span>✝️</span><span>✝️</span>
+    <!-- Main GOSPEL Card -->
+    <div class="card">
+      <div class="emoji">
+        <span>✝️</span><span>✝️</span><span>✝️</span>
+      </div>
+      <h1>The Gospel</h1>
+      <div class="subtitle">GOSPEL – A Simple Outline</div>
+      <div class="verses">
+        <p><strong>G – God</strong><br>God loves you.</p>
+        <p><strong>O – Our Sins</strong><br>Our sins separate us from God.</p>
+        <p><strong>S – Savior</strong><br>Jesus is the only way.</p>
+        <p><strong>P – Pay</strong><br>Jesus paid the penalty for sin.</p>
+        <p><strong>E – Eternal Life</strong><br>God offers it freely.</p>
+        <p><strong>L – Live</strong><br>Live for Him.</p>
+      </div>
+      <div class="footer">Simple. Hopeful. Life-changing.</div>
     </div>
-    <h1>The Gospel</h1>
-    <div class="subtitle">GOSPEL – A Simple Outline</div>
-    <div class="verses">
-      <p><strong>G – God</strong><br>
-      God loves you.</p>
 
-      <p><strong>O – Our Sins</strong><br>
-      Our sins separate us from God.</p>
-
-      <p><strong>S – Savior</strong><br>
-      Jesus is the only way.</p>
-
-      <p><strong>P – Pay</strong><br>
-      Jesus paid the penalty for sin.</p>
-
-      <p><strong>E – Eternal Life</strong><br>
-      God offers it freely.</p>
-
-      <p><strong>L – Live</strong><br>
-      Live for Him.</p>
-    </div>
-    <div class="footer">
-      Simple. Hopeful. Life-changing.
+    <!-- Right Verse Card -->
+    <div class="verse-card">
+      <p><strong>Romans 10:9</strong><br>“If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart that God raised Him from the dead, you will be saved.”</p>
     </div>
   </div>
 </body>
 </html>
-
